@@ -2,7 +2,6 @@ package starter.stepdef;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 import starter.reqres.ReqresAPI;
@@ -17,6 +16,6 @@ public class DeleteUserSteps {
 
     @When("Send request delete user")
     public void sendRequestDeleteUser() {
-        SerenityRest.when().delete(ReqresAPI.USER_WITH_ID);
+        SerenityRest.when().delete(ReqresAPI.PUT_WITH_ID);
     }
 }

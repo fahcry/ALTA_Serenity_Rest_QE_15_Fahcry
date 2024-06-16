@@ -30,4 +30,9 @@ public class GetListUserStepDef {
         SerenityRest.and().body(ReqresResponses.PAGE, equalTo(page));
 
     }
+
+    @Given("Get list users with parameter page {string}")
+    public void getListUsersWithParameterPage(String simbol) {
+        reqresAPI.getListUsers1(simbol);
+    }
 }

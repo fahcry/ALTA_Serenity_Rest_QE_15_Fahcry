@@ -11,3 +11,11 @@ Feature: Get list Users API
     |page|
     |1   |
     |2   |
+
+    @Tugas
+      #negative tapi kok 200?
+    Scenario: Get list users with invalid paramete page
+      Given Get list users with parameter page "#"
+      When Send request get list users
+      Then Status code should be 400
+

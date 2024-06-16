@@ -7,6 +7,7 @@ Then Status code should be 200
 And Respons body name should be "QpwL5tke4Pnpja7X4"
 And Validate json schema "login_valid_json_schema.json"
 @Tugas
+  #negative case
   Scenario: Create login user with invalid data
     Given Create new login user with file json "login_invalid.json"
     When Send request post create user login

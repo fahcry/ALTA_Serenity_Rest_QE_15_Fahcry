@@ -15,7 +15,7 @@ public class LoginUserSteps {
     @Given("Create new login user with file json {string}")
     public void createNewLoginUserWithFileJson(String fileName) {
        File fileJson = new File(Constants.REQ_BODY + fileName);
-       reqresAPI.postCreateNewUser(fileJson);
+       reqresAPI.postLoginUser(fileJson);
     }
 
     @When("Send request post create user login")

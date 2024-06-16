@@ -20,11 +20,13 @@ public class RegisterSteps {
     @Given("Create register user with file json {string}")
     public void createRegisterUserWithFileJson(String filename) {
         File fileJson = new File(Constants.REQ_BODY + filename);
+        reqresAPI.postRegisterUser(fileJson);
     }
 
     @When("Send request post register user")
     public void sendRequestPostRegisterUser() {
-        SerenityRest.given().log().everything(true).header("Content-Type", "application/json").when().post(ReqresAPI.REGISTER_USER);
+        SerenityRest.when().post(ReqresAPI.REGISTER_USER);
+//      SerenityRest.and().log().everything(true).header("Content-Type", "application/json");
     }
 
 }
