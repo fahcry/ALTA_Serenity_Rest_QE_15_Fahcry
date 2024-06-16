@@ -56,4 +56,14 @@ public class ResponsesSteps {
                 .body(ReqresResponses.ID, equalTo(id))
                 .body(ReqresResponses.TOKEN, equalTo(token));
     }
+
+//    @And("Respons body id should be {string}")
+//    public void responsBodyIdShouldBe(String error1) {
+//        SerenityRest.and().body(ReqresResponses.ERROR1, equalTo(error1));
+//    }
+
+    @And("Respons body id should be error {string}")
+    public void responsBodyIdShouldBeError(String error) {
+        SerenityRest.and().body(ReqresResponses.ERROR,equalTo(error));
+    }
 }
